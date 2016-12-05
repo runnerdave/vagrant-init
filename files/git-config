@@ -1,0 +1,7 @@
+[user]
+    name = David Jimenez
+    email = runnerdave@gmail.com
+[http]
+    proxy = http://proxy.rmit.edu.au:8080
+[https]
+    proxy = https://proxy.rmit.edu.au:8080

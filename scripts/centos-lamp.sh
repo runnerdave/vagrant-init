@@ -25,9 +25,9 @@ yum install -y mysql mysql-server mysql-devel
 chkconfig --add mysqld
 chkconfig mysqld on
 
-service mysqld start
+#service mysqld start
 
-mysql -u root -e "SHOW DATABASES";
+#mysql -u root -e "SHOW DATABASES";
 
 # Download Starter Content
 cd /vagrant
