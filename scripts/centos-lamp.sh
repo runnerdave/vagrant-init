@@ -20,14 +20,13 @@ service httpd start
 # PHP
 yum install -y php php-cli php-common php-devel php-mysql
 
-# MySQL 
-yum install -y mysql mysql-server mysql-devel
-chkconfig --add mysqld
-chkconfig mysqld on
+# MySQL - maria db
+#does not work in centos yum install -y mysql mysql-server mysql-devel
+yum install -y mysql mariadb-server
+systemctl enable mariadb
+systemctl start mariadb
 
-#service mysqld start
-
-#mysql -u root -e "SHOW DATABASES";
+mysql -u root -e "SHOW DATABASES";
 
 # Download Starter Content
 cd /vagrant
