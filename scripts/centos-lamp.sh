@@ -12,6 +12,10 @@ chkconfig --add httpd
 chkconfig httpd on
 service httpd stop
 
+firewall-cmd --permanent --add-port=80/tcp
+firewall-cmd --permanent --add-port=443/tcp
+firewall-cmd --reload
+
 rm -rf /var/www/html
 ln -s /vagrant /var/www/html 
 
